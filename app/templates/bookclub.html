@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Book Club President</h2>
+            <p>Leviticus Cornwall founded the Davistopia Book Club shortly after the library's opening in 2024, and has been the serving president ever since. His sycophantic loyalty to Davis, and willingness to say whatever he wants to hear, make him the perfect candidate for the position. He is also a fan of the works of Ayn Rand, and has been known to quote her at length during meetings.</p>
+            <img src="{{ url_for('static', filename='assets/chaps.png') }}" alt="President Image" class="img-fluid mt-3">
+        </div>
+        <div class="col-md-6">
+            <h2>Application Form</h2>
+            <form>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="ssn">Social Security Number</label>
+                    <input type="text" class="form-control" id="ssn" placeholder="Enter your SSN">
+                </div>
+                <div class="form-group">
+                    <label for="favoriteBook">Favorite Book</label>
+                    <input type="text" class="form-control" id="favoriteBook" placeholder="Enter your favorite book">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
