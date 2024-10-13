@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Pet Gallery</h1>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='assets/pet1.jpg') }}" class="card-img-top" alt="Pet 1">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Buddy</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='assets/pet2.jpg') }}" class="card-img-top" alt="Pet 2">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Salem</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='assets/pet3.jpeg') }}" class="card-img-top" alt="Pet 3">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Emmy</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='assets/pet4.jpg') }}" class="card-img-top" alt="Pet 4">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Cracker</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='assets/pet5.jpeg') }}" class="card-img-top" alt="Pet 5">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Pixel</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='assets/pet6.jpg') }}" class="card-img-top" alt="Pet 6">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Bo</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
