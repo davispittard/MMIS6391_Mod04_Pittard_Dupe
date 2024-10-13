@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Update Pet</h1>
+
+    <!-- Update Pet Form -->
+    <form method="POST" action="{{ url_for('pets.update_pet', pet_id=pet.pet_id) }}">
+        <div class="form-group">
+            <label for="pet_name">Pet Name</label>
+            <input type="text" class="form-control" id="pet_name" name="pet_name" value="{{ pet.pet_name }}" required>
+        </div>
+        <div class="form-group">
+            <label for="owner_name">Owner Name</label>
+            <input type="text" class="form-control" id="owner_name" name="owner_name" value="{{ pet.owner_name }}" required>
+        </div>
+        <div class="form-group">
+            <label for="owner_email">Owner Email</label>
+            <input type="email" class="form-control" id="owner_email" name="owner_email" value="{{ pet.owner_email }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Pet</button>
+        <a href="{{ url_for('pets.pet') }}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+{% endblock %}
