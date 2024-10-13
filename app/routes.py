@@ -12,3 +12,7 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html')
