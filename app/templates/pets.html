@@ -12,10 +12,10 @@
                 <input type="text" class="form-control" name="pet_name" placeholder="Pet Name" required>
             </div>
             <div class="col">
-                <input type="text" class="form-control" name="owner_name" placeholder="Owner Name" required>
+                <input type="text" class="form-control" name="pet_type" placeholder="Pet Type" required>
             </div>
             <div class="col">
-                <input type="email" class="form-control" name="owner_email" placeholder="Owner Email" required>
+                <input type="text" class="form-control" name="pet_breed" placeholder="Pet Breed" required>
             </div>
             <div class="col">
                 <button type="submit" class="btn btn-primary">Add Pet</button>
@@ -29,8 +29,8 @@
             <tr>
                 <th scope="col">Pet ID</th>
                 <th scope="col">Pet Name</th>
-                <th scope="col">Owner Name</th>
-                <th scope="col">Owner Email</th>
+                <th scope="col">Pet Type</th>
+                <th scope="col">Pet Breed</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -39,8 +39,8 @@
             <tr>
                 <td>{{ pet.pet_id }}</td>
                 <td>{{ pet.pet_name }}</td>
-                <td>{{ pet.owner_name }}</td>
-                <td>{{ pet.owner_email }}</td>
+                <td>{{ pet.pet_type }}</td>
+                <td>{{ pet.pet_breed }}</td>
                 <td>
                     <!-- Update button -->
                     <a href="{{ url_for('pets.update_pet', pet_id=pet.pet_id) }}" class="btn btn-warning btn-sm">Update</a>

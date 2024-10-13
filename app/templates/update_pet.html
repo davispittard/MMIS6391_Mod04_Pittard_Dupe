@@ -12,12 +12,12 @@
             <input type="text" class="form-control" id="pet_name" name="pet_name" value="{{ pet.pet_name }}" required>
         </div>
         <div class="form-group">
-            <label for="owner_name">Owner Name</label>
-            <input type="text" class="form-control" id="owner_name" name="owner_name" value="{{ pet.owner_name }}" required>
+            <label for="pet_type">Pet Type</label>
+            <input type="text" class="form-control" id="pet_type" name="pet_type" value="{{ pet.pet_type }}" required>
         </div>
         <div class="form-group">
-            <label for="owner_email">Owner Email</label>
-            <input type="email" class="form-control" id="owner_email" name="owner_email" value="{{ pet.owner_email }}" required>
+            <label for="pet_breed">Pet Breed</label>
+            <input type="text" class="form-control" id="pet_breed" name="pet_breed" value="{{ pet.pet_breed }}" required>
         </div>
         <button type="submit" class="btn btn-primary">Update Pet</button>
         <a href="{{ url_for('pets.pet') }}" class="btn btn-secondary">Cancel</a>

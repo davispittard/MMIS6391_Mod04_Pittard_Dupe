@@ -11,11 +11,11 @@ def pet():
     # Handle POST request to add a new pet
     if request.method == 'POST':
         pet_name = request.form['pet_name']
-        owner_name = request.form['owner_name']
-        owner_email = request.form['owner_email']
+        pet_type = request.form['pet_type']
+        pet_breed = request.form['pet_breed']
 
         # Insert the new pet into the database
-        cursor.execute('INSERT INTO pets (pet_name, owner_name, owner_email) VALUES (%s, %s, %s)', (pet_name, owner_name, owner_email))
+        cursor.execute('INSERT INTO pets (pet_name, pet_type, pet_breed) VALUES (%s, %s, %s)', (pet_name, pet_type, pet_breed))
         db.commit()
 
         flash('New pet successfully added to database!', 'success')
@@ -34,11 +34,11 @@ def update_pet(pet_id):
     if request.method == 'POST':
         # Update the pet's details
         pet_name = request.form['pet_name']
-        owner_name = request.form['owner_name']
-        owner_email = request.form['owner_email']
+        pet_type = request.form['pet_type']
+        pet_breed = request.form['pet_breed']
 
-        cursor.execute('UPDATE pets SET pet_name = %s, owner_name = %s, owner_email = %s WHERE pet_id = %s',
-                       (pet_name, owner_name, owner_email, pet_id))
+        cursor.execute('UPDATE pets SET pet_name = %s, pet_type = %s, pet_breed = %s WHERE pet_id = %s',
+                       (pet_name, pet_type, pet_breed, pet_id))
         db.commit()
 
         flash('Pet info updated successfully!', 'success')
