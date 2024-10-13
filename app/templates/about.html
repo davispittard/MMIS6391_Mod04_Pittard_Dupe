@@ -2,7 +2,35 @@
 
 {% block content %}
 
-<h1>About</h1>
-
+<div class="container mt-5">
+    <div class="row">
+        <!-- Text block on the left -->
+        <div class="col-md-6">
+            <h1>About Paws in Hand Pet Store</h1>
+            <p>
+                Paws in Hand Pet Store was founded in 2024 with the mission to connect people with pets they can love and cherish.
+                The owner, Davis Pittard, is a lifetime pet lover who noticed a lack of resources in the community for finding pets.
+                Our store offers both rescued pets and those bought from breeders.
+            </p>
+            <p>
+                Our dedicated team works tirelessly to ensure that all our pets are healthy, happy, and ready to become a part of your family.
+                We also offer a range of pet care products to help you take the best care of your new friend.
+            </p>
+        </div>
+        <!-- Image spots on the right -->
+        <div class="col-md-6">
+            <div class="row mb-4">
+                <div class="col">
+                    <img src="{{ url_for('static', filename='assets/davis1.jpg') }}" alt="Owner" class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="{{ url_for('static', filename='assets/owner_with_cat.jpg') }}" alt="Owner playing with a cat" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
