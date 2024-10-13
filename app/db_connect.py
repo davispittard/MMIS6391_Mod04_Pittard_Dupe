@@ -8,7 +8,7 @@ def get_db():
         g.db = pymysql.connect(
             # Database configuration
             # Configure MySQL
-            host = 'vvfv20el7sb2enn3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+            host = 'op2hpcwcbxb1t4z9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
             user = 'sd69axvdh3pxhyyk',
             password = 'tliyhblzo8mft2e8',
             database = 'abgcu8k4nz9yy7wc',
